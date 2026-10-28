@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    color-scheme: dark;
+    --fundo: #08111f;
+    --painel: #111f33;
+    --painel-claro: #172a43;
+    --texto: #f3f7ff;
+    --texto-suave: #b8c6da;
+    --destaque: #5eead4;
+    --destaque-escuro: #123e43;
+    --borda: #2c405a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 28px 16px;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle at top, #142b47 0, var(--fundo) 58%);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(100%, 760px);
+    padding: clamp(24px, 5vw, 52px);
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    background: rgba(17, 31, 51, .96);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .25);
+}
+
+h1 {
+    margin: 0 0 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+}
+
+.etiqueta {
+    margin: 0 0 12px;
+    color: var(--destaque);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+}
+
+.introducao, .caixa-perguntas, .texto-resultado {
+    color: var(--texto-suave);
+    font-size: 1.08rem;
+    white-space: pre-line;
+}
+
+.botao, .alternativa {
+    width: 100%;
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 15px 18px;
+    font: inherit;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.botao {
+    margin-top: 20px;
+    border-color: var(--destaque);
+    background: var(--destaque);
+    color: #062421;
+    text-align: center;
+}
+
+.alternativa {
+    margin-top: 12px;
+    background: var(--painel-claro);
+    color: var(--texto);
+}
+
+.botao:hover, .alternativa:hover {
+    transform: translateY(-2px);
+}
+
+.alternativa:hover {
+    border-color: var(--destaque);
+    background: var(--destaque-escuro);
+}
+
+.botao:focus-visible, .alternativa:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.progresso {
+    margin: 0 0 12px;
+    color: var(--destaque);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.titulo-jogo {
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+}
+
+.caixa-alternativas {
+    display: grid;
+    gap: 2px;
+}
+
+footer {
+    margin-top: 36px;
+    color: #8093ad;
+    font-size: .8rem;
+    text-align: center;
+}
+
+[hidden] { display: none !important; }
+
+@media (max-width: 480px) {
+    body { padding: 14px 10px; }
+    .container { padding: 24px 18px; border-radius: 18px; }
+}

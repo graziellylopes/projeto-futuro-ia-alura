@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jogo interativo sobre o futuro da inteligência artificial.">
+    <title>Você decide o futuro da IA</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <main class="container">
+        <section class="caixa-inicial">
+            <p class="etiqueta">MISSÃO 2049</p>
+            <h1>Você decide o futuro da IA</h1>
+            <p class="introducao">O futuro da inteligência artificial também depende das escolhas que fazemos hoje. Responda às perguntas e descubra como suas decisões podem influenciar esse futuro.</p>
+            <button class="botao botao-iniciar" type="button">Iniciar missão</button>
+        </section>
+
+        <section class="caixa-jogo" hidden>
+            <p class="progresso" aria-live="polite"></p>
+            <h1 class="titulo-jogo">Faça suas escolhas</h1>
+            <p class="caixa-perguntas"></p>
+            <div class="caixa-alternativas"></div>
+        </section>
+
+        <section class="caixa-resultado" hidden>
+            <p class="etiqueta">MISSÃO CONCLUÍDA</p>
+            <h1>Seu futuro com a IA</h1>
+            <p class="texto-resultado" aria-live="polite"></p>
+            <button class="botao botao-jogar-novamente" type="button">Jogar novamente</button>
+        </section>
+        <footer>Projeto educacional • Start by Alura</footer>
+    </main>
+</body>
+</html>
